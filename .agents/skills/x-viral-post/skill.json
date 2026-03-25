@@ -1,0 +1,18 @@
+{
+  "name": "x-viral-post",
+  "description": "X(Twitter)でバイラルになる科学的手法に基づいた投稿を作成。3つの原則（教育、アーキテクチャ、配布）を活用し、インプレッション最適化された投稿を設計する。'X投稿作成', 'バイラル投稿', 'X最適化', 'ツイート設計', 'エンゲージメント最適化', 'viral post', 'X growth', 'tweet optimization' などのキーワードで発動。x-researcher、x-copywriter、x-marketerと連携して使用。",
+  "version": "1.0.0",
+  "author": "Custom",
+  "keywords": [
+    "X投稿作成",
+    "バイラル投稿",
+    "X最適化",
+    "ツイート設計",
+    "エンゲージメント最適化",
+    "インプレッション最適化",
+    "viral post",
+    "X growth",
+    "tweet optimization",
+    "viral content"
+  ]
+}

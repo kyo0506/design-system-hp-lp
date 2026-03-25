@@ -1,0 +1,38 @@
+{
+  "name": "design-system-hp-lp-template",
+  "version": "1.0.0",
+  "description": "デザイン性に優れたHP/LP作成リポジトリ - Claude Codeスキル統合",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "dev": "npx live-server --port=8080 --open=templates/landing-page",
+    "serve": "npx http-server . -p 8080",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "design-system",
+    "landing-page",
+    "homepage",
+    "template",
+    "ui-ux",
+    "web-design",
+    "claude-code",
+    "pilates",
+    "responsive",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/design-system-hp-lp"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/design-system-hp-lp/issues"
+  },
+  "homepage": "https://github.com/yourusername/design-system-hp-lp#readme"
+}
