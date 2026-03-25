@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="渋谷の女性専門パーソナルピラティススタジオ。初心者から経験者まで、一人ひとりに合わせた丁寧な指導で理想の身体づくりをサポートします。">
+    <title>渋谷店 | 女性専門パーソナルピラティス</title>
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="../../design-system/index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* カスタムカラースキーム - COCOLANCEスタイル */
+        :root {
+            /* ブラウン系 */
+            --color-primary-50: hsl(30, 25%, 97%);
+            --color-primary-100: hsl(30, 25%, 92%);
+            --color-primary-200: hsl(30, 20%, 85%);
+            --color-primary-300: hsl(30, 18%, 70%);
+            --color-primary-400: hsl(30, 16%, 55%);
+            --color-primary-500: hsl(30, 20%, 43%); /* #7e6a59 に近い */
+            --color-primary-600: hsl(30, 20%, 35%);
+            --color-primary-700: hsl(30, 20%, 27%);
+            --color-primary-800: hsl(30, 20%, 20%);
+            --color-primary-900: hsl(30, 20%, 12%);
+
+            /* パステルブルー - アクセント */
+            --color-secondary-50: hsl(197, 80%, 97%);
+            --color-secondary-100: hsl(197, 85%, 92%);
+            --color-secondary-200: hsl(197, 85%, 85%);
+            --color-secondary-300: hsl(197, 85%, 75%);
+            --color-secondary-400: hsl(197, 85%, 65%);
+            --color-secondary-500: hsl(197, 87%, 84%); /* #b4e0fa */
+            --color-secondary-600: hsl(197, 87%, 70%);
+
+            /* オレンジ - アクセント */
+            --color-accent: hsl(33, 100%, 71%); /* #ffb36b */
+            --color-accent-light: hsl(33, 100%, 85%);
+
+            /* テキストカラー */
+            --color-text-primary: hsl(30, 20%, 20%);
+            --color-text-secondary: hsl(30, 15%, 40%);
+        }
+
+        /* フォント設定 */
+        body {
+            font-family: 'Noto Sans JP', 'Zen Antique Soft', sans-serif;
+            font-size: 15px;
+            color: var(--color-text-primary);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Zen Antique Soft', 'Noto Sans JP', serif;
+        }
+
+        /* ナビゲーション */
+        .nav {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-brand {
+            font-family: 'Zen Antique Soft', serif;
+            font-size: 1.5rem;
+            color: var(--color-primary-600);
+        }
+
+        /* ヒーローセクション */
+        .hero-elegant {
+            position: relative;
+            min-height: 85vh;
+            background: linear-gradient(135deg, rgba(126, 106, 89, 0.1), rgba(180, 224, 250, 0.15)),
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&h=900&fit=crop&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-elegant::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-elegant .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* セクションタイトル */
+        .section-title {
+            font-family: 'Zen Antique Soft', serif;
+            font-size: 2.5rem;
+            color: var(--color-primary-600);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--color-accent);
+            margin: 1rem auto 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* カード - エレガントスタイル */
+        .card-elegant {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(126, 106, 89, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--color-accent);
+        }
+
+        .card-elegant:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(126, 106, 89, 0.15);
+        }
+
+        .card-elegant .icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--color-secondary-500), var(--color-accent-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        /* バッジ */
+        .badge-elegant {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(255, 179, 107, 0.3);
+        }
+
+        /* ボタン - エレガント */
+        .btn-elegant {
+            background: var(--color-primary-500);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(126, 106, 89, 0.3);
+        }
+
+        .btn-elegant:hover {
+            background: var(--color-primary-600);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(126, 106, 89, 0.4);
+        }
+
+        .btn-outline-elegant {
+            background: transparent;
+            color: var(--color-primary-600);
+            border: 2px solid var(--color-primary-500);
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-elegant:hover {
+            background: var(--color-primary-500);
+            color: white;
+        }
+
+        /* 店舗情報テーブル */
+        .info-table {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .info-table tr {
+            border-bottom: 1px solid var(--color-primary-100);
+        }
+
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .info-table th {
+            background: var(--color-primary-500);
+            color: white;
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 500;
+            width: 30%;
+        }
+
+        .info-table td {
+            padding: 1.2rem;
+            color: var(--color-text-primary);
+        }
+
+        /* 料金カード */
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 6px 25px rgba(126, 106, 89, 0.12);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--color-accent);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--color-accent);
+            background: linear-gradient(to bottom, white, var(--color-primary-50));
+        }
+
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin: 1.5rem 0;
+        }
+
+        .price-tag .currency {
+            font-size: 1.5rem;
+        }
+
+        .price-tag .period {
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+            font-weight: 400;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary-600);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--color-primary-50);
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 5rem;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        /* インストラクターカード */
+        .instructor-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .instructor-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .instructor-info {
+            padding: 2rem;
+        }
+
+        .instructor-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-title {
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* フロー番号 */
+        .flow-number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        /* ギャラリー */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-elegant {
+                min-height: 70vh;
+            }
+
+            .info-table th,
+            .info-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .info-table th {
+                border-bottom: none;
+                padding-bottom: 0.5rem;
+            }
+        }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>">
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="nav">
+        <a href="#" class="nav-brand">🧘‍♀️ PILATES STUDIO</a>
+        <ul class="nav-links md:hidden">
+            <li><a href="#about" class="nav-link">スタジオ紹介</a></li>
+            <li><a href="#reasons" class="nav-link">選ばれる理由</a></li>
+            <li><a href="#plans" class="nav-link">料金プラン</a></li>
+            <li><a href="#access" class="nav-link">アクセス</a></li>
+            <li><a href="#contact" class="btn btn-primary btn-sm">無料体験予約</a></li>
+        </ul>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="hero-elegant">
+        <div class="container container-4xl fade-in-up">
+            <div class="badge-elegant mb-6">✨ 初回体験レッスン 50% OFF</div>
+            <h1 class="text-6xl font-extrabold mb-6" style="color: var(--color-primary-700); font-family: 'Zen Antique Soft', serif;">
+                渋谷で始める、<br>理想の身体づくり
+            </h1>
+            <p class="text-xl mb-8 leading-relaxed" style="color: var(--color-text-secondary); max-width: 650px; margin-left: auto; margin-right: auto;">
+                女性専門パーソナルピラティススタジオ<br>
+                初心者から経験者まで、一人ひとりに合わせた丁寧な指導で<br>
+                あなたの理想の身体づくりをサポートします
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#contact" class="btn-elegant">無料体験レッスンを予約</a>
+                <a href="#about" class="btn-outline-elegant">スタジオを見学</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- スタジオ紹介 -->
+    <section id="about" class="section">
+        <div class="container container-7xl">
+            <h2 class="section-title">スタジオについて</h2>
+            <p class="section-subtitle">ABOUT US</p>
+
+            <div class="grid grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop&q=80"
+                         alt="スタジオ内観"
+                         style="border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+                </div>
+                <div class="scroll-animate">
+                    <h3 class="text-3xl font-bold mb-4" style="color: var(--color-primary-600);">
+                        渋谷駅徒歩5分<br>
+                        女性専門ピラティススタジオ
+                    </h3>
+                    <p class="mb-4 leading-relaxed" style="color: var(--color-text-secondary);">
+                        当スタジオは、渋谷駅から徒歩5分の好立地にある女性専門のパーソナルピラティススタジオです。
+                        落ち着いた雰囲気の中で、経験豊富なインストラクターが一人ひとりの体質や目標に合わせた
+                        オーダーメイドのプログラムをご提供します。
+                    </p>
+                    <p class="mb-6 leading-relaxed" style="color: var(--color-text-secondary);">
+                        初めての方でも安心して始められるよう、基礎から丁寧にご指導いたします。
+                        美しい姿勢、しなやかな身体、健康的なライフスタイルを手に入れましょう。
+                    </p>
+                    <a href="#contact" class="btn-elegant">無料体験を申し込む</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section id="reasons" class="section" style="background-color: var(--color-primary-50);">
+        <div class="container container-7xl">
+            <h2 class="section-title">選ばれる理由</h2>
+            <p class="section-subtitle">WHY CHOOSE US</p>
+
+            <div class="grid grid-cols-4 gap-8">
+                <div class="card-elegant scroll-animate">
+                    <div class="icon">👤</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                        完全パーソナル指導
+                    </h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                        マンツーマンまたは少人数制で、一人ひとりの身体の状態に合わせた丁寧な指導を行います。
+                    </p>
+                </div>
+
+                <div class="card-elegant scroll-animate">
+                    <div class="icon">🎓</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                        資格を持つ講師陣
+                    </h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                        国際資格を持つプロフェッショナルが、正しいフォームと効果的なメソッドを指導します。
+                    </p>
+                </div>
+
+                <div class="card-elegant scroll-animate">
+                    <div class="icon">✨</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                        最新のマシン完備
+                    </h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                        リフォーマーをはじめとする最新のピラティス専用マシンを完備した快適な空間です。
+                    </p>
+                </div>
+
+                <div class="card-elegant scroll-animate">
+                    <div class="icon">🌸</div>
+                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                        女性専用空間
+                    </h3>
+                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                        女性だけの空間で、周りを気にせずリラックスしてレッスンを受けられます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 初心者の方へ -->
+    <section class="section">
+        <div class="container container-6xl">
+            <div style="background: linear-gradient(135deg, var(--color-secondary-500), var(--color-accent-light)); padding: 3rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
+                <h2 class="text-3xl font-bold mb-4" style="color: white;">
+                    初めての方でも安心してください
+                </h2>
+                <p class="text-lg mb-6" style="color: rgba(255,255,255,0.95); line-height: 1.8; max-width: 700px; margin: 0 auto;">
+                    当スタジオにお越しいただく方の<strong>80%以上が初心者</strong>からスタートしています。<br>
+                    運動が苦手な方、身体が硬い方でも大丈夫。基礎から丁寧にサポートいたします。<br>
+                    まずは体験レッスンで、ピラティスの心地よさを実感してください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店内写真 -->
+    <section class="section" style="background-color: var(--color-primary-50);">
+        <div class="container container-7xl">
+            <h2 class="section-title">スタジオギャラリー</h2>
+            <p class="section-subtitle">GALLERY</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop&q=80" alt="レッスン風景1">
+                </div>
+                <div class="gallery-item scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=400&fit=crop&q=80" alt="スタジオ設備">
+                </div>
+                <div class="gallery-item scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?w=600&h=400&fit=crop&q=80" alt="マシンピラティス">
+                </div>
+                <div class="gallery-item scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80" alt="レッスン風景2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 店舗情報・アクセス -->
+    <section id="access" class="section">
+        <div class="container container-6xl">
+            <h2 class="section-title">店舗情報・アクセス</h2>
+            <p class="section-subtitle">ACCESS</p>
+
+            <div class="scroll-animate">
+                <table class="info-table">
+                    <tr>
+                        <th>店舗名</th>
+                        <td>PILATES STUDIO 渋谷店</td>
+                    </tr>
+                    <tr>
+                        <th>住所</th>
+                        <td>〒150-0002 東京都渋谷区渋谷1-2-3 渋谷ビル4F</td>
+                    </tr>
+                    <tr>
+                        <th>アクセス</th>
+                        <td>
+                            JR・東京メトロ・東急線「渋谷駅」徒歩5分<br>
+                            渋谷ヒカリエより徒歩3分
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>
+                            平日: 7:00 - 22:00<br>
+                            土日祝: 9:00 - 19:00
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td>毎月第3月曜日</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>03-1234-5678</td>
+                    </tr>
+                    <tr>
+                        <th>メール</th>
+                        <td>info@pilates-shibuya.jp</td>
+                    </tr>
+                </table>
+
+                <!-- Googleマップ埋め込みエリア -->
+                <div style="margin-top: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                    <div style="background: var(--color-primary-100); padding: 3rem; text-align: center;">
+                        <p style="color: var(--color-text-secondary);">
+                            📍 Googleマップをここに埋め込むことができます
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section id="plans" class="section" style="background-color: var(--color-primary-50);">
+        <div class="container container-7xl">
+            <h2 class="section-title">料金プラン</h2>
+            <p class="section-subtitle">PRICING</p>
+
+            <div class="grid grid-cols-3 gap-8">
+                <div class="pricing-card scroll-animate">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">体験レッスン</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">初めての方限定</p>
+                    <div class="price-tag">
+                        <span class="currency">¥</span>2,000
+                        <div class="period">/1回</div>
+                    </div>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                        通常¥4,000 → 50%OFF
+                    </p>
+                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
+                        <li>✓ 60分のパーソナルレッスン</li>
+                        <li>✓ カウンセリング付き</li>
+                        <li>✓ ウェア・タオル無料</li>
+                        <li>✓ 当日入会で特典あり</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline-elegant" style="display: block; text-align: center; text-decoration: none;">
+                        体験予約
+                    </a>
+                </div>
+
+                <div class="pricing-card featured scroll-animate">
+                    <div class="badge-elegant mb-3">人気No.1</div>
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">月4回プラン</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">週1ペースで継続</p>
+                    <div class="price-tag">
+                        <span class="currency">¥</span>26,400
+                        <div class="period">/月</div>
+                    </div>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                        1回あたり ¥6,600
+                    </p>
+                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
+                        <li>✓ 月4回（60分/回）</li>
+                        <li>✓ 繰越可能（翌月まで）</li>
+                        <li>✓ オンライン予約</li>
+                        <li>✓ ウェア・タオル無料</li>
+                        <li>✓ 体組成計測定</li>
+                    </ul>
+                    <a href="#contact" class="btn-elegant" style="display: block; text-align: center; text-decoration: none;">
+                        お申し込み
+                    </a>
+                </div>
+
+                <div class="pricing-card scroll-animate">
+                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">月8回プラン</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">本格的に取り組みたい方</p>
+                    <div class="price-tag">
+                        <span class="currency">¥</span>48,000
+                        <div class="period">/月</div>
+                    </div>
+                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+                        1回あたり ¥6,000
+                    </p>
+                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
+                        <li>✓ 月8回（60分/回）</li>
+                        <li>✓ 繰越可能（翌月まで）</li>
+                        <li>✓ 優先予約</li>
+                        <li>✓ ウェア・タオル無料</li>
+                        <li>✓ 栄養相談サービス</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline-elegant" style="display: block; text-align: center; text-decoration: none;">
+                        お申し込み
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                    ※ 価格は全て税込表示です<br>
+                    ※ 入会金: ¥10,000（体験当日のご入会で無料）
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 体験の流れ -->
+    <section class="section">
+        <div class="container container-7xl">
+            <h2 class="section-title">体験レッスンの流れ</h2>
+            <p class="section-subtitle">TRIAL LESSON FLOW</p>
+
+            <div class="grid grid-cols-4 gap-6">
+                <div class="text-center scroll-animate">
+                    <div class="flow-number">1</div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">カウンセリング</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                        お悩みや目標をお伺いします（10分）
+                    </p>
+                </div>
+
+                <div class="text-center scroll-animate">
+                    <div class="flow-number">2</div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">着替え・準備</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                        無料のウェアに着替えていただきます（5分）
+                    </p>
+                </div>
+
+                <div class="text-center scroll-animate">
+                    <div class="flow-number">3</div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">レッスン</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                        マンツーマンでレッスン開始（60分）
+                    </p>
+                </div>
+
+                <div class="text-center scroll-animate">
+                    <div class="flow-number">4</div>
+                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">アフターフォロー</h3>
+                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                        ご質問やプラン説明（15分）
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- インストラクター紹介 -->
+    <section class="section" style="background-color: var(--color-primary-50);">
+        <div class="container container-7xl">
+            <h2 class="section-title">インストラクター紹介</h2>
+            <p class="section-subtitle">INSTRUCTORS</p>
+
+            <div class="grid grid-cols-3 gap-8">
+                <div class="instructor-card scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=80" alt="インストラクター1">
+                    <div class="instructor-info">
+                        <div class="instructor-name">山田 美咲</div>
+                        <div class="instructor-title">チーフインストラクター</div>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                            BASI Pilates 認定インストラクター。10年以上の指導経験を持ち、初心者から上級者まで幅広く対応。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="instructor-card scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80" alt="インストラクター2">
+                    <div class="instructor-info">
+                        <div class="instructor-name">佐藤 恵美</div>
+                        <div class="instructor-title">シニアインストラクター</div>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                            FTP Pilates 認定。産前・産後ピラティスを得意とし、多くのママさんをサポート。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="instructor-card scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80" alt="インストラクター3">
+                    <div class="instructor-info">
+                        <div class="instructor-name">鈴木 麻衣</div>
+                        <div class="instructor-title">インストラクター</div>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
+                            Balanced Body 認定。ダンサーとしての経験を活かした美しい動きの指導に定評あり。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container-6xl">
+            <h2 class="section-title">よくあるご質問</h2>
+            <p class="section-subtitle">FAQ</p>
+
+            <div class="scroll-animate">
+                <div class="faq-item">
+                    <div class="faq-question">運動が苦手でも大丈夫ですか？</div>
+                    <div class="faq-answer">
+                        はい、大丈夫です。当スタジオにお越しいただく方の8割以上が初心者からスタートしています。
+                        一人ひとりの体力やレベルに合わせて無理なく進めていきますので、ご安心ください。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">身体が硬くても参加できますか？</div>
+                    <div class="faq-answer">
+                        もちろんです。ピラティスは柔軟性を高めるのに最適なエクササイズです。
+                        続けることで徐々に身体が柔らかくなり、動きやすくなることを実感していただけます。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">どのくらいの頻度で通うのが効果的ですか？</div>
+                    <div class="faq-answer">
+                        週1〜2回のペースをおすすめしています。継続的に通うことで、姿勢の改善や体力向上などの効果を実感しやすくなります。
+                        まずは月4回プランから始めてみてはいかがでしょうか。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">持ち物は何が必要ですか？</div>
+                    <div class="faq-answer">
+                        動きやすい服装と、お水をお持ちください。ウェアやタオルは無料でレンタルしていますので、
+                        お仕事帰りでも手ぶらでお越しいただけます。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">予約のキャンセルはできますか？</div>
+                    <div class="faq-answer">
+                        レッスン開始の24時間前までであれば、無料でキャンセル・変更が可能です。
+                        それ以降のキャンセルは、1回分消化となりますのでご注意ください。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ・予約 -->
+    <section id="contact" class="section" style="background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));">
+        <div class="container container-4xl text-center">
+            <h2 class="text-5xl font-extrabold mb-6" style="color: white; font-family: 'Zen Antique Soft', serif;">
+                無料体験レッスン予約
+            </h2>
+            <p class="text-xl mb-8" style="color: rgba(255,255,255,0.95); line-height: 1.8;">
+                まずは体験レッスンで、ピラティスの効果を実感してください。<br>
+                オンラインまたはお電話でご予約を承っています。
+            </p>
+
+            <form class="card" style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <div class="form-group">
+                    <label class="form-label">お名前 *</label>
+                    <input type="text" class="form-input" placeholder="山田 花子" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">フリガナ *</label>
+                    <input type="text" class="form-input" placeholder="ヤマダ ハナコ" required>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="form-group">
+                        <label class="form-label">メールアドレス *</label>
+                        <input type="email" class="form-input" placeholder="hanako@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">電話番号 *</label>
+                        <input type="tel" class="form-input" placeholder="090-1234-5678" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">ご希望日時 *</label>
+                    <input type="text" class="form-input" placeholder="例: 3月30日（土）14:00〜" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">ご質問・ご要望</label>
+                    <textarea class="form-input" rows="4" placeholder="身体のお悩みや気になることがあればお書きください"></textarea>
+                </div>
+
+                <button type="submit" class="btn-elegant" style="width: 100%; background: var(--color-accent);">
+                    体験レッスンを予約する
+                </button>
+
+                <p class="form-helper text-center" style="margin-top: 1.5rem; color: var(--color-text-secondary);">
+                    24時間以内に担当者よりご連絡いたします<br>
+                    お急ぎの方は、お電話（03-1234-5678）でもご予約を承っております
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="section" style="background-color: var(--color-primary-700); color: white; padding: 3rem 0 1.5rem;">
+        <div class="container container-7xl">
+            <div class="grid grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" style="font-family: 'Zen Antique Soft', serif; color: var(--color-accent);">
+                        🧘‍♀️ PILATES STUDIO
+                    </h3>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        渋谷の女性専門<br>
+                        パーソナルピラティススタジオ<br>
+                        理想の身体づくりをサポートします
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">営業時間</h4>
+                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); line-height: 2;">
+                        <li>平日: 7:00 - 22:00</li>
+                        <li>土日祝: 9:00 - 19:00</li>
+                        <li>定休日: 第3月曜日</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">お問い合わせ</h4>
+                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); line-height: 2;">
+                        <li>📞 03-1234-5678</li>
+                        <li>✉️ info@pilates-shibuya.jp</li>
+                        <li>📍 渋谷区渋谷1-2-3</li>
+                        <li style="margin-top: 1rem;">
+                            <a href="#" style="color: var(--color-accent); margin-right: 1rem;">Instagram</a>
+                            <a href="#" style="color: var(--color-accent); margin-right: 1rem;">Facebook</a>
+                            <a href="#" style="color: var(--color-accent);">LINE</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center pt-6" style="border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
+                <p style="margin-bottom: 0.5rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">プライバシーポリシー</a>
+                    <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">利用規約</a>
+                    <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">特定商取引法</a>
+                </p>
+                <p>© 2024 PILATES STUDIO Shibuya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // FAQアコーディオン（シンプル版 - クリックで回答を表示/非表示）
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                answer.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+
+        // 初期状態：FAQ回答を非表示
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
