@@ -3,16 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="渋谷の女性専門パーソナルピラティススタジオ。初心者から経験者まで、一人ひとりに合わせた丁寧な指導で理想の身体づくりをサポートします。">
-    <title>渋谷店 | 女性専門パーソナルピラティス</title>
+    <meta name="description" content="六本木の女性専門パーソナルピラティススタジオ。初心者から経験者まで、一人ひとりに合わせた丁寧な指導で理想の身体づくりをサポートします。">
+    <title>六本木店 | 女性専門パーソナルピラティス</title>
 
     <!-- Design System -->
-    <link rel="stylesheet" href="../../design-system/index.css">
+    <link rel="stylesheet" href="design-system/index.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ============================================ -->
+    <!-- 広告トラッキングコード（追加してください） -->
+    <!-- ============================================ -->
+
+    <!-- Google Analytics (GA4) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
+    <!-- Google Ads コンバージョントラッキング -->
+    <!--
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    -->
+
+    <!-- Facebook Pixel -->
+    <!--
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+
+    <!-- Yahoo広告タグ -->
+    <!--
+    <script type="text/javascript">
+        (function () {
+            var tagjs = document.createElement("script");
+            var s = document.getElementsByTagName("script")[0];
+            tagjs.async = true;
+            tagjs.src = "//s.yjtag.jp/tag.js#site=SITE_ID";
+            s.parentNode.insertBefore(tagjs, s);
+        }());
+    </script>
+    -->
+
+    <!-- LINE Tag -->
+    <!--
+    <script>
+        (function(g,d,o){
+            g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+            var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+            var s=d.createElement('script');s.async=1;
+            s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+            var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+        })(window, document);
+        _lt('init', {
+            customerType: 'lap',
+            tagId: 'YOUR_TAG_ID'
+        });
+        _lt('send', 'pv', ['YOUR_TAG_ID']);
+    </script>
+    -->
 
     <style>
         /* カスタムカラースキーム - COCOLANCEスタイル */
@@ -53,31 +136,64 @@
             font-size: 15px;
             color: var(--color-text-primary);
             line-height: 1.8;
+            margin: 0;
+            padding: 0;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Zen Antique Soft', 'Noto Sans JP', serif;
         }
 
+        /* セクション余白 */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        /* コンテナ余白 */
+        .container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        /* 段落余白 */
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
         /* ナビゲーション */
         .nav {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 1.5rem 3rem;
         }
 
         .nav-brand {
             font-family: 'Zen Antique Soft', serif;
             font-size: 1.5rem;
             color: var(--color-primary-600);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand img {
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .nav-brand img:hover {
+            opacity: 0.8;
         }
 
         /* ヒーローセクション */
         .hero-elegant {
             position: relative;
-            min-height: 85vh;
-            background: linear-gradient(135deg, rgba(126, 106, 89, 0.1), rgba(180, 224, 250, 0.15)),
-                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&h=900&fit=crop&q=80') center/cover;
+            min-height: 90vh;
+            background: url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1920&h=1080&fit=crop&q=90') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,12 +207,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(0, 0, 0, 0.4);
         }
 
         .hero-elegant .container {
             position: relative;
             z-index: 1;
+            padding: 4rem 2rem;
         }
 
         /* セクションタイトル */
@@ -129,12 +246,13 @@
         .card-elegant {
             background: white;
             border-radius: 12px;
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             box-shadow: 0 4px 20px rgba(126, 106, 89, 0.1);
             transition: all 0.3s ease;
             border-top: 4px solid var(--color-accent);
             min-width: 0; /* グリッドオーバーフロー防止 */
             word-wrap: break-word;
+            text-align: center;
         }
 
         .card-elegant:hover {
@@ -158,32 +276,36 @@
         .badge-elegant {
             display: inline-block;
             padding: 0.5rem 1.5rem;
-            background: var(--color-accent);
+            background: transparent;
             color: white;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            box-shadow: 0 2px 10px rgba(255, 179, 107, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
         }
 
         /* ボタン - エレガント */
         .btn-elegant {
-            background: var(--color-primary-500);
+            background: transparent;
             color: white;
-            padding: 1rem 3rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            border: none;
+            padding: 1rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(126, 106, 89, 0.3);
+            text-transform: uppercase;
         }
 
         .btn-elegant:hover {
-            background: var(--color-primary-600);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(126, 106, 89, 0.4);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-1px);
         }
 
         .btn-outline-elegant {
@@ -333,7 +455,8 @@
 
         .instructor-card img {
             width: 100%;
-            height: 280px;
+            height: auto;
+            max-height: 400px;
             object-fit: cover;
         }
 
@@ -369,40 +492,118 @@
             margin: 0 auto 1rem;
         }
 
-        /* ギャラリー */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        /* ギャラリーカルーセル */
+        .gallery-carousel {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .gallery-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 800px;
+            object-fit: contain;
+            object-position: center center;
+            display: block;
+            background: #f5f5f5;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-primary-600);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-nav:hover {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .carousel-nav-prev {
+            left: 20px;
+        }
+
+        .carousel-nav-next {
+            right: 20px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(126, 106, 89, 0.3);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .carousel-indicator.active {
+            background: var(--color-primary-600);
+            width: 32px;
+            border-radius: 6px;
         }
 
         @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
+            .gallery-slide img {
+                height: 500px;
+                object-fit: contain;
             }
 
-            .gallery-item img {
-                height: 200px;
+            .carousel-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
             }
-        }
 
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
+            .carousel-nav-prev {
+                left: 10px;
+            }
 
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+            .carousel-nav-next {
+                right: 10px;
+            }
         }
 
         /* アニメーション */
@@ -443,6 +644,15 @@
 
         /* レスポンシブ */
         @media (max-width: 768px) {
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
             .section-title {
                 font-size: 1.75rem;
             }
@@ -452,24 +662,29 @@
             }
 
             .hero-elegant {
-                min-height: 70vh;
+                min-height: 80vh;
                 padding: 2rem 1rem;
             }
 
             .hero-elegant h1 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
+                font-weight: 300 !important;
             }
 
             .hero-elegant p {
-                font-size: 1rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            .badge-elegant {
+                font-size: 0.65rem !important;
             }
 
             .btn-elegant,
             .btn-outline-elegant {
                 padding: 0.875rem 2rem;
-                font-size: 1rem;
+                font-size: 0.8rem;
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
             }
 
             .info-table th,
@@ -489,7 +704,12 @@
             }
 
             .instructor-card img {
-                height: 250px;
+                max-height: 350px;
+            }
+
+            /* ABOUT USセクションの画像 - スマホ対応 */
+            #about img {
+                max-height: 350px !important;
             }
 
             .price-tag {
@@ -523,136 +743,214 @@
         }
     </style>
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>">
+    <link rel="icon" type="image/png" href="images/logo.webp">
 </head>
 <body>
     <!-- ナビゲーション -->
     <nav class="nav">
-        <a href="#" class="nav-brand">🧘‍♀️ Studio MiiA 渋谷</a>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link">スタジオ紹介</a></li>
-            <li><a href="#reasons" class="nav-link">選ばれる理由</a></li>
-            <li><a href="#plans" class="nav-link">料金プラン</a></li>
-            <li><a href="#access" class="nav-link">アクセス</a></li>
-            <li><a href="#contact" class="btn btn-primary btn-sm">体験レッスン予約</a></li>
-        </ul>
+        <a href="#" class="nav-brand">
+            <img src="images/logo.webp" alt="Studio MiiA 六本木" style="height: 80px; width: auto;">
+        </a>
     </nav>
 
     <!-- ヒーローセクション -->
     <section class="hero-elegant">
         <div class="container container-4xl fade-in-up">
-            <div class="badge-elegant mb-6">✨ 完全予約制・紹介制プライベートスタジオ</div>
-            <h1 class="text-6xl font-extrabold mb-6" style="color: var(--color-primary-700); font-family: 'Zen Antique Soft', serif;">
+            <div class="badge-elegant" style="margin-bottom: 2rem;">Private Pilates Studio</div>
+
+            <h1 style="color: white; font-family: 'Zen Antique Soft', serif; font-size: 3.5rem; font-weight: 300; line-height: 1.4; margin-bottom: 1.5rem; letter-spacing: 0.05em;">
                 一人ひとりに寄り添う<br>プライベートピラティス
             </h1>
-            <p class="text-xl mb-8 leading-relaxed" style="color: var(--color-text-secondary); max-width: 650px; margin-left: auto; margin-right: auto;">
-                渋谷駅徒歩5分・完全プライベート空間<br>
-                体幹とインナーマッスルを鍛え、美容と健康状態の向上を実現<br>
-                男女年齢問わず、また来たいと思える温かい空間
+
+            <p style="color: rgba(255, 255, 255, 0.9); font-size: 1rem; font-weight: 300; max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.9; letter-spacing: 0.05em;">
+                六本木駅徒歩2分・完全予約制<br>
+                体幹とインナーマッスルを鍛え、美と健康を実現する
             </p>
-            <div class="flex gap-4 justify-center flex-wrap">
-                <a href="#contact" class="btn-elegant">体験レッスンを予約</a>
-                <a href="#about" class="btn-outline-elegant">詳しく見る</a>
+
+            <p style="color: rgba(255, 255, 255, 0.85); font-size: 0.9rem; font-weight: 300; max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.8; letter-spacing: 0.08em; font-style: italic;">
+                ※ モデル・インフルエンサーも通う、口コミで広がるプライベートスタジオ
+            </p>
+
+            <p style="color: white; font-size: 1.1rem; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em;">
+                予約はここから30秒
+            </p>
+
+            <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 3rem;">
+                <a href="reserve-line.html" class="btn-elegant">
+                    LINE予約
+                </a>
+                <a href="reserve-hotpepper.html" class="btn-elegant">
+                    ホットペッパー
+                </a>
             </div>
         </div>
     </section>
 
     <!-- スタジオ紹介 -->
-    <section id="about" class="section">
+    <section id="about" class="section" style="padding: 8rem 2rem; background: white;">
         <div class="container container-7xl">
-            <h2 class="section-title">スタジオについて</h2>
-            <p class="section-subtitle">ABOUT US</p>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">About Us</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+                    スタジオについて
+                </h2>
+            </div>
 
-            <div class="grid gap-12 items-center" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="grid gap-16 items-center" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); max-width: 1400px; margin: 0 auto;">
                 <div class="scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop&q=80"
-                         alt="スタジオ内観"
-                         style="border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); width: 100%; height: auto;">
+                    <img src="images/pic_img23.webp"
+                         alt="インストラクター"
+                         style="border-radius: 2px; box-shadow: 0 4px 40px rgba(0,0,0,0.08); width: 100%; height: auto; max-height: 600px; object-fit: cover; object-position: center bottom;">
                 </div>
                 <div class="scroll-animate">
-                    <h3 class="text-3xl font-bold mb-4" style="color: var(--color-primary-600);">
-                        渋谷駅徒歩5分<br>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.8rem; font-weight: 300; color: var(--color-primary-600); margin-bottom: 2.5rem; letter-spacing: 0.05em; line-height: 1.6;">
+                        六本木駅徒歩2分<br>
                         プライベートレッスン専門スタジオ
                     </h3>
-                    <p class="mb-4 leading-relaxed" style="color: var(--color-text-secondary);">
-                        当スタジオは、完全予約制のプライベートピラティススタジオです。
-                        一人ひとりと丁寧に向き合い、その方に合ったプログラムをご提供することを大切にしています。
-                        体幹とインナーマッスルを鍛えることで、代謝向上・血行促進・脂肪燃焼を促します。
+                    <p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
+                        当スタジオは、完全予約制のプライベートピラティススタジオです。一人ひとりと丁寧に向き合い、その方に合ったプログラムをご提供することを大切にしています。体幹とインナーマッスルを鍛えることで、代謝向上・血行促進・脂肪燃焼を促します。
                     </p>
-                    <p class="mb-6 leading-relaxed" style="color: var(--color-text-secondary);">
-                        高齢者の方や体に不調のある方でも無理なく取り組めるレッスン内容となっております。
-                        また来たいと思っていただけるような、アットホームな空間づくりを心がけています。
-                        男女年齢を問わず、美容と健康状態の向上を実感していただけます。
+                    <p style="color: var(--color-text-secondary); margin-bottom: 3rem; line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
+                        高齢者の方や体に不調のある方でも無理なく取り組めるレッスン内容となっております。また来たいと思っていただけるような、アットホームな空間づくりを心がけています。男女年齢を問わず、美容と健康状態の向上を実感していただけます。
                     </p>
-                    <a href="#contact" class="btn-elegant">無料体験を申し込む</a>
+                    <p style="color: var(--color-primary-600); font-size: 1.1rem; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em; text-align: center;">
+                        予約はここから30秒
+                    </p>
+                    <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 3rem;">
+                        <a href="reserve-line.html" style="display: inline-block; padding: 0.875rem 2rem; background: transparent; color: #06C755; border: 1px solid rgba(6, 199, 85, 0.6); border-radius: 2px; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease;">
+                            LINE
+                        </a>
+                        <a href="reserve-hotpepper.html" style="display: inline-block; padding: 0.875rem 2rem; background: transparent; color: #FF6B35; border: 1px solid rgba(255, 107, 53, 0.6); border-radius: 2px; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease;">
+                            Hot Pepper
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 選ばれる理由 -->
-    <section id="reasons" class="section" style="background-color: var(--color-primary-50);">
+    <section id="reasons" class="section" style="padding: 8rem 2rem; background-color: var(--color-primary-50);">
         <div class="container container-7xl">
-            <h2 class="section-title">選ばれる理由</h2>
-            <p class="section-subtitle">WHY CHOOSE US</p>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">Why Choose Us</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+                    選ばれる理由
+                </h2>
+            </div>
 
-            <div class="grid gap-8" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="card-elegant scroll-animate">
-                    <div class="icon">👤</div>
-                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+            <div class="grid gap-12" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); max-width: 1200px; margin: 0 auto;">
+                <div class="scroll-animate reason-card" style="position: relative; background: white; padding: 3rem 2rem 2.5rem; text-align: center; border-left: 4px solid var(--color-primary-600); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 3.5rem; font-weight: 300; color: rgba(126, 106, 89, 0.15); margin-bottom: 1rem; letter-spacing: 0.05em;">01</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em;">
                         完全プライベート制
                     </h3>
-                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
                         紹介制・完全予約制のプライベートレッスン。一人ひとりと向き合い、その方に合ったプログラムを提供します。
                     </p>
                 </div>
 
-                <div class="card-elegant scroll-animate">
-                    <div class="icon">💪</div>
-                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                <div class="scroll-animate reason-card" style="position: relative; background: white; padding: 3rem 2rem 2.5rem; text-align: center; border-left: 4px solid var(--color-primary-600); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 3.5rem; font-weight: 300; color: rgba(126, 106, 89, 0.15); margin-bottom: 1rem; letter-spacing: 0.05em;">02</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em;">
                         体幹強化に特化
                     </h3>
-                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
                         体幹とインナーマッスルを鍛え、代謝向上・血行促進・脂肪燃焼を実現します。
                     </p>
                 </div>
 
-                <div class="card-elegant scroll-animate">
-                    <div class="icon">🏠</div>
-                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                <div class="scroll-animate reason-card" style="position: relative; background: white; padding: 3rem 2rem 2.5rem; text-align: center; border-left: 4px solid var(--color-primary-600); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 3.5rem; font-weight: 300; color: rgba(126, 106, 89, 0.15); margin-bottom: 1rem; letter-spacing: 0.05em;">03</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em;">
                         アットホームな空間
                     </h3>
-                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
                         また来たいと思える温かい雰囲気。リラックスしてレッスンを受けられる環境です。
                     </p>
                 </div>
 
-                <div class="card-elegant scroll-animate">
-                    <div class="icon">🌟</div>
-                    <h3 class="text-xl font-bold mb-3" style="color: var(--color-primary-600);">
+                <div class="scroll-animate reason-card" style="position: relative; background: white; padding: 3rem 2rem 2.5rem; text-align: center; border-left: 4px solid var(--color-primary-600); box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 3.5rem; font-weight: 300; color: rgba(126, 106, 89, 0.15); margin-bottom: 1rem; letter-spacing: 0.05em;">04</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em;">
                         幅広い年齢層対応
                     </h3>
-                    <p style="color: var(--color-text-secondary); line-height: 1.8;">
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em;">
                         高齢者や体に不調のある方でも無理なく取り組める内容。男女年齢問わず歓迎します。
                     </p>
                 </div>
             </div>
+
+            <style>
+                .reason-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 12px 35px rgba(126, 106, 89, 0.2);
+                    border-left-width: 6px;
+                }
+            </style>
         </div>
     </section>
 
     <!-- 初心者の方へ -->
-    <section class="section">
-        <div class="container container-6xl">
-            <div style="background: linear-gradient(135deg, var(--color-secondary-500), var(--color-accent-light)); padding: 3rem; border-radius: 20px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.1);">
-                <h2 class="text-3xl font-bold mb-4" style="color: white;">
+    <section class="section" style="padding: 8rem 2rem; background: white;">
+        <div class="container container-7xl">
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">For Beginners</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
                     一人ひとりに寄り添ったレッスン
                 </h2>
-                <p class="text-lg mb-6" style="color: rgba(255,255,255,0.95); line-height: 1.8; max-width: 700px; margin: 0 auto;">
-                    プライベートレッスンだからこそ、あなたのペースで無理なく続けられます。<br>
-                    体力に自信がない方、高齢の方、体に不調のある方も安心してご参加いただけます。<br>
-                    完全予約制で、周りを気にせず集中してレッスンを受けられる環境です。
+                <p style="color: var(--color-text-secondary); line-height: 2; font-weight: 300; font-size: 1rem; letter-spacing: 0.03em; max-width: 700px; margin: 2rem auto 0;">
+                    運動が苦手な方、体力に自信がない方、高齢の方も安心してご参加いただけます。<br>
+                    プライベートレッスンだからこそ実現できる、あなただけの特別な時間です。
                 </p>
             </div>
+
+            <div class="grid gap-10" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 1200px; margin: 0 auto;">
+                <div class="scroll-animate beginner-card" style="position: relative; background: white; padding: 3rem 2.5rem; border-left: 3px solid var(--color-primary-600); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 4rem; font-weight: 300; color: rgba(126, 106, 89, 0.08); position: absolute; top: 1.5rem; right: 1.5rem; line-height: 1; letter-spacing: 0.05em;">1</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em; position: relative;">
+                        自分のペースで
+                    </h3>
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em; position: relative;">
+                        無理なく続けられるよう、一人ひとりの体力や体調に合わせてプログラムを組み立てます
+                    </p>
+                </div>
+
+                <div class="scroll-animate beginner-card" style="position: relative; background: white; padding: 3rem 2.5rem; border-left: 3px solid var(--color-primary-600); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 4rem; font-weight: 300; color: rgba(126, 106, 89, 0.08); position: absolute; top: 1.5rem; right: 1.5rem; line-height: 1; letter-spacing: 0.05em;">2</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em; position: relative;">
+                        安心のサポート
+                    </h3>
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em; position: relative;">
+                        丁寧なカウンセリングと細やかな指導で、不安なく始められる環境をご用意しています
+                    </p>
+                </div>
+
+                <div class="scroll-animate beginner-card" style="position: relative; background: white; padding: 3rem 2.5rem; border-left: 3px solid var(--color-primary-600); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 1px; background: linear-gradient(90deg, transparent, var(--color-primary-600), transparent);"></div>
+                    <div style="font-family: 'Zen Antique Soft', serif; font-size: 4rem; font-weight: 300; color: rgba(126, 106, 89, 0.08); position: absolute; top: 1.5rem; right: 1.5rem; line-height: 1; letter-spacing: 0.05em;">3</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; color: var(--color-primary-600); margin-bottom: 1.5rem; letter-spacing: 0.05em; position: relative;">
+                        周りを気にせず集中
+                    </h3>
+                    <p style="color: var(--color-text-primary); line-height: 2; font-weight: 300; font-size: 0.95rem; letter-spacing: 0.03em; position: relative;">
+                        完全プライベート空間で、他の人の目を気にすることなくレッスンに集中できます
+                    </p>
+                </div>
+            </div>
+
+            <style>
+                .beginner-card:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 8px 30px rgba(126, 106, 89, 0.15);
+                    border-left-width: 5px;
+                }
+            </style>
         </div>
     </section>
 
@@ -662,52 +960,74 @@
             <h2 class="section-title">スタジオギャラリー</h2>
             <p class="section-subtitle">GALLERY</p>
 
-            <div class="gallery-grid">
-                <div class="gallery-item scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop&q=80" alt="レッスン風景1">
+            <div class="gallery-carousel">
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-slide">
+                        <img src="images/ZjQe5cN4.webp" alt="Studio MiiA スタジオ内観">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/WkUpwEWC.webp" alt="Studio MiiA レッスン風景">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/3dnE9KKB.webp" alt="Studio MiiA インストラクター">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="images/WPfcZUwd.webp" alt="Studio MiiA スタジオ内観">
+                    </div>
                 </div>
-                <div class="gallery-item scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=400&fit=crop&q=80" alt="スタジオ設備">
-                </div>
-                <div class="gallery-item scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?w=600&h=400&fit=crop&q=80" alt="マシンピラティス">
-                </div>
-                <div class="gallery-item scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop&q=80" alt="レッスン風景2">
-                </div>
+
+                <button class="carousel-nav carousel-nav-prev" id="prevBtn" aria-label="前の画像">‹</button>
+                <button class="carousel-nav carousel-nav-next" id="nextBtn" aria-label="次の画像">›</button>
+            </div>
+
+            <div class="carousel-indicators" id="carouselIndicators">
+                <button class="carousel-indicator active" data-index="0" aria-label="画像1"></button>
+                <button class="carousel-indicator" data-index="1" aria-label="画像2"></button>
+                <button class="carousel-indicator" data-index="2" aria-label="画像3"></button>
+                <button class="carousel-indicator" data-index="3" aria-label="画像4"></button>
             </div>
         </div>
     </section>
 
     <!-- 店舗情報・アクセス -->
-    <section id="access" class="section">
+    <section id="access" class="section" style="padding: 8rem 2rem; background: white;">
         <div class="container container-6xl">
-            <h2 class="section-title">店舗情報・アクセス</h2>
-            <p class="section-subtitle">ACCESS</p>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">Access</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+                    店舗情報・アクセス
+                </h2>
+            </div>
 
             <div class="scroll-animate">
-                <table class="info-table">
+                <table class="info-table" style="font-size: 1rem; line-height: 2; color: var(--color-text-primary);">
                     <tr>
                         <th>店舗名</th>
-                        <td>ピラティスプライベートレッスン スタジオMiiA 渋谷店</td>
+                        <td>
+                            Studio MiiA 1号店<br>
+                            Studio MiiA 2号店
+                        </td>
                     </tr>
                     <tr>
                         <th>住所</th>
-                        <td>〒150-0002 東京都渋谷区渋谷1-2-3 渋谷ビル4F</td>
+                        <td>
+                            〒106-0032<br>
+                            東京都港区六本木7-15-13<br>
+                            六本木ダイヤハイツ 510号 1号店 / 508号 2号店
+                        </td>
                     </tr>
                     <tr>
                         <th>アクセス</th>
                         <td>
-                            JR・東京メトロ・東急線「渋谷駅」徒歩5分<br>
-                            渋谷ヒカリエより徒歩3分<br>
+                            日比谷線「六本木駅」徒歩2分<br>
                             ※完全予約制・紹介制のプライベートスタジオです
                         </td>
                     </tr>
                     <tr>
                         <th>営業時間</th>
                         <td>
-                            12:00 - 21:00（完全予約制）<br>
-                            ※最終受付 20:00
+                            1号店: 12:00 - 21:00（完全予約制）<br>
+                            2号店: 12:00 - 19:00（完全予約制）
                         </td>
                     </tr>
                     <tr>
@@ -719,10 +1039,6 @@
                         <td>080-3981-9678</td>
                     </tr>
                     <tr>
-                        <th>メール</th>
-                        <td>info@studio-miia-shibuya.jp</td>
-                    </tr>
-                    <tr>
                         <th>レッスン形式</th>
                         <td>プライベート（パーソナル）レッスン専門</td>
                     </tr>
@@ -730,86 +1046,37 @@
 
                 <!-- Googleマップ埋め込みエリア -->
                 <div style="margin-top: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                    <div style="background: var(--color-primary-100); padding: 3rem; text-align: center;">
-                        <p style="color: var(--color-text-secondary);">
-                            📍 Googleマップをここに埋め込むことができます
-                        </p>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1455.282169775555!2d139.73047812185018!3d35.66296994034369!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b78266eaaab%3A0x3ca8ad9951ff71aa!2z5YWt5pys5pyo44OA44Kk44Ok44OP44Kk44OE!5e0!3m2!1sja!2sjp!4v1774782612670!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 料金プラン -->
-    <section id="plans" class="section" style="background-color: var(--color-primary-50);">
+    <section id="plans" class="section" style="background-color: var(--color-primary-50); padding: 8rem 2rem;">
         <div class="container container-7xl">
-            <h2 class="section-title">料金プラン</h2>
-            <p class="section-subtitle">PRICING</p>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 3rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">Pricing</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+                    料金プラン
+                </h2>
+            </div>
 
-            <div class="grid gap-8" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="pricing-card scroll-animate">
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">体験レッスン</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">初めての方限定</p>
-                    <div class="price-tag">
-                        <span class="currency">¥</span>5,500
-                        <div class="period">/1回</div>
-                    </div>
-                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
-                        60分のプライベートレッスン
-                    </p>
-                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
-                        <li>✓ マンツーマン指導</li>
-                        <li>✓ カウンセリング付き</li>
-                        <li>✓ 体の状態チェック</li>
-                        <li>✓ オーダーメイドプログラム</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline-elegant" style="display: block; text-align: center; text-decoration: none;">
-                        体験予約
-                    </a>
-                </div>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 3rem;">
+                <img src="images/price.webp" alt="料金表" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 30px rgba(0,0,0,0.12); display: block; margin: 0 auto;">
+            </div>
 
-                <div class="pricing-card featured scroll-animate">
-                    <div class="badge-elegant mb-3">おすすめ</div>
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">ドロップイン</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">都度払い</p>
-                    <div class="price-tag">
-                        <span class="currency">¥</span>8,800
-                        <div class="period">/1回</div>
-                    </div>
-                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
-                        60分のプライベートレッスン
-                    </p>
-                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
-                        <li>✓ 予約制・都度払い</li>
-                        <li>✓ 自分のペースで通える</li>
-                        <li>✓ 有効期限なし</li>
-                        <li>✓ 初回体験後の方</li>
-                    </ul>
-                    <a href="#contact" class="btn-elegant" style="display: block; text-align: center; text-decoration: none;">
-                        お申し込み
-                    </a>
-                </div>
+            <p class="scroll-animate" style="color: var(--color-primary-600); font-size: 1.1rem; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em; text-align: center;">
+                予約はここから30秒
+            </p>
 
-                <div class="pricing-card scroll-animate">
-                    <h3 class="text-xl font-bold mb-2" style="color: var(--color-primary-600);">回数券プラン</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem;">お得な回数券</p>
-                    <div class="price-tag">
-                        <span style="font-size: 1.2rem;">¥7,700〜</span>
-                        <div class="period">/1回あたり</div>
-                    </div>
-                    <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem;">
-                        5回・10回・20回から選択
-                    </p>
-                    <ul style="text-align: left; margin-bottom: 2rem; color: var(--color-text-secondary); line-height: 2;">
-                        <li>✓ 回数が多いほどお得</li>
-                        <li>✓ 有効期限あり</li>
-                        <li>✓ 継続割引あり</li>
-                        <li>✓ お友達紹介特典</li>
-                    </ul>
-                    <a href="#contact" class="btn-outline-elegant" style="display: block; text-align: center; text-decoration: none;">
-                        詳しく見る
-                    </a>
-                </div>
+            <div class="scroll-animate" style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                <a href="reserve-line.html" style="display: inline-block; padding: 0.875rem 2rem; background: transparent; color: #06C755; border: 1px solid rgba(6, 199, 85, 0.6); border-radius: 2px; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease;">
+                    LINE
+                </a>
+                <a href="reserve-hotpepper.html" style="display: inline-block; padding: 0.875rem 2rem; background: transparent; color: #FF6B35; border: 1px solid rgba(255, 107, 53, 0.6); border-radius: 2px; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.12em; text-decoration: none; text-transform: uppercase; transition: all 0.3s ease;">
+                    Hot Pepper
+                </a>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -823,85 +1090,50 @@
     </section>
 
     <!-- 体験の流れ -->
-    <section class="section">
+    <section class="section" style="padding: 8rem 2rem; background: white;">
         <div class="container container-7xl">
-            <h2 class="section-title">体験レッスンの流れ</h2>
-            <p class="section-subtitle">TRIAL LESSON FLOW</p>
-
-            <div class="grid gap-6" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                <div class="text-center scroll-animate">
-                    <div class="flow-number">1</div>
-                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">カウンセリング</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                        お悩みや目標をお伺いします（10分）
-                    </p>
-                </div>
-
-                <div class="text-center scroll-animate">
-                    <div class="flow-number">2</div>
-                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">着替え・準備</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                        無料のウェアに着替えていただきます（5分）
-                    </p>
-                </div>
-
-                <div class="text-center scroll-animate">
-                    <div class="flow-number">3</div>
-                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">レッスン</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                        マンツーマンでレッスン開始（60分）
-                    </p>
-                </div>
-
-                <div class="text-center scroll-animate">
-                    <div class="flow-number">4</div>
-                    <h3 class="text-lg font-bold mb-2" style="color: var(--color-primary-600);">アフターフォロー</h3>
-                    <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                        ご質問やプラン説明（15分）
-                    </p>
-                </div>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
+                <p style="color: var(--color-primary-400); font-size: 0.75rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">Trial Lesson Flow</p>
+                <h2 style="font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; color: var(--color-primary-600); letter-spacing: 0.05em; margin-bottom: 1.5rem;">
+                    体験レッスンの流れ
+                </h2>
             </div>
-        </div>
-    </section>
 
-    <!-- インストラクター紹介 -->
-    <section class="section" style="background-color: var(--color-primary-50);">
-        <div class="container container-7xl">
-            <h2 class="section-title">インストラクター紹介</h2>
-            <p class="section-subtitle">INSTRUCTORS</p>
-
-            <div class="grid gap-8" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="instructor-card scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=80" alt="インストラクター1">
-                    <div class="instructor-info">
-                        <div class="instructor-name">山田 美咲</div>
-                        <div class="instructor-title">チーフインストラクター</div>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                            BASI Pilates 認定インストラクター。10年以上の指導経験を持ち、初心者から上級者まで幅広く対応。
-                        </p>
-                    </div>
+            <div class="grid gap-6" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); max-width: 1200px; margin: 0 auto;">
+                <div class="scroll-animate" style="background: white; border: 1.5px solid rgba(0, 0, 0, 0.15); border-radius: 4px; padding: 2.5rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--color-primary-600), var(--color-primary-400));"></div>
+                    <div style="display: inline-block; width: 50px; height: 50px; border: 2px solid rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; line-height: 46px; margin-bottom: 1.5rem; border-radius: 2px; letter-spacing: 0.05em;">1</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.3rem; font-weight: 400; color: rgba(0, 0, 0, 0.85); margin-bottom: 1rem; letter-spacing: 0.05em;">カウンセリング</h3>
+                    <p style="color: rgba(0, 0, 0, 0.6); font-size: 0.9rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.03em;">
+                        お悩みや目標を<br>お伺いします（10分）
+                    </p>
                 </div>
 
-                <div class="instructor-card scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80" alt="インストラクター2">
-                    <div class="instructor-info">
-                        <div class="instructor-name">佐藤 恵美</div>
-                        <div class="instructor-title">シニアインストラクター</div>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                            FTP Pilates 認定。産前・産後ピラティスを得意とし、多くのママさんをサポート。
-                        </p>
-                    </div>
+                <div class="scroll-animate" style="background: white; border: 1.5px solid rgba(0, 0, 0, 0.15); border-radius: 4px; padding: 2.5rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--color-primary-600), var(--color-primary-400));"></div>
+                    <div style="display: inline-block; width: 50px; height: 50px; border: 2px solid rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; line-height: 46px; margin-bottom: 1.5rem; border-radius: 2px; letter-spacing: 0.05em;">2</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.3rem; font-weight: 400; color: rgba(0, 0, 0, 0.85); margin-bottom: 1rem; letter-spacing: 0.05em;">着替え・準備</h3>
+                    <p style="color: rgba(0, 0, 0, 0.6); font-size: 0.9rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.03em;">
+                        無料のウェアに<br>着替えていただきます（5分）
+                    </p>
                 </div>
 
-                <div class="instructor-card scroll-animate">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80" alt="インストラクター3">
-                    <div class="instructor-info">
-                        <div class="instructor-name">鈴木 麻衣</div>
-                        <div class="instructor-title">インストラクター</div>
-                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.7;">
-                            Balanced Body 認定。ダンサーとしての経験を活かした美しい動きの指導に定評あり。
-                        </p>
-                    </div>
+                <div class="scroll-animate" style="background: white; border: 1.5px solid rgba(0, 0, 0, 0.15); border-radius: 4px; padding: 2.5rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--color-primary-600), var(--color-primary-400));"></div>
+                    <div style="display: inline-block; width: 50px; height: 50px; border: 2px solid rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; line-height: 46px; margin-bottom: 1.5rem; border-radius: 2px; letter-spacing: 0.05em;">3</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.3rem; font-weight: 400; color: rgba(0, 0, 0, 0.85); margin-bottom: 1rem; letter-spacing: 0.05em;">レッスン</h3>
+                    <p style="color: rgba(0, 0, 0, 0.6); font-size: 0.9rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.03em;">
+                        マンツーマンで<br>レッスン開始（60分）
+                    </p>
+                </div>
+
+                <div class="scroll-animate" style="background: white; border: 1.5px solid rgba(0, 0, 0, 0.15); border-radius: 4px; padding: 2.5rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative;">
+                    <div style="position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--color-primary-600), var(--color-primary-400));"></div>
+                    <div style="display: inline-block; width: 50px; height: 50px; border: 2px solid rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); font-family: 'Zen Antique Soft', serif; font-size: 1.5rem; font-weight: 400; line-height: 46px; margin-bottom: 1.5rem; border-radius: 2px; letter-spacing: 0.05em;">4</div>
+                    <h3 style="font-family: 'Zen Antique Soft', serif; font-size: 1.3rem; font-weight: 400; color: rgba(0, 0, 0, 0.85); margin-bottom: 1rem; letter-spacing: 0.05em;">アフターフォロー</h3>
+                    <p style="color: rgba(0, 0, 0, 0.6); font-size: 0.9rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.03em;">
+                        ご質問や<br>プラン説明（15分）
+                    </p>
                 </div>
             </div>
         </div>
@@ -957,60 +1189,35 @@
         </div>
     </section>
 
-    <!-- お問い合わせ・予約 -->
-    <section id="contact" class="section" style="background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));">
-        <div class="container container-4xl text-center">
-            <h2 class="text-5xl font-extrabold mb-6" style="color: white; font-family: 'Zen Antique Soft', serif;">
-                体験レッスン予約
-            </h2>
-            <p class="text-xl mb-8" style="color: rgba(255,255,255,0.95); line-height: 1.8;">
-                まずは体験レッスンで、あなたに合ったプログラムを体感してください。<br>
-                完全予約制のため、お電話またはフォームからご予約ください。
-            </p>
+    <!-- 予約CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600)); padding: 6rem 2rem;">
+        <div class="container container-7xl" style="text-align: center;">
+            <div class="scroll-animate">
+                <h2 style="color: white; font-family: 'Zen Antique Soft', serif; font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem; letter-spacing: 0.05em;">
+                    体験レッスン予約
+                </h2>
+                <p style="color: rgba(255,255,255,0.95); line-height: 2; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1rem; font-weight: 300; letter-spacing: 0.03em;">
+                    まずは体験レッスンで、あなたに合ったプログラムを体感してください。<br>
+                    完全予約制のため、LINEまたはホットペッパーからご予約ください。
+                </p>
 
-            <form class="card" style="max-width: 600px; margin: 0 auto; text-align: left;">
-                <div class="form-group">
-                    <label class="form-label">お名前 *</label>
-                    <input type="text" class="form-input" placeholder="山田 花子" required>
+                <p style="color: white; font-size: 1.1rem; font-weight: 500; margin-bottom: 1.5rem; letter-spacing: 0.05em;">
+                    予約はここから30秒
+                </p>
+
+                <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="reserve-line.html" class="btn-elegant" style="background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.9);">
+                        LINE予約
+                    </a>
+                    <a href="reserve-hotpepper.html" class="btn-elegant" style="background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.9);">
+                        ホットペッパー
+                    </a>
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">フリガナ *</label>
-                    <input type="text" class="form-input" placeholder="ヤマダ ハナコ" required>
-                </div>
-
-                <div class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-                    <div class="form-group">
-                        <label class="form-label">メールアドレス *</label>
-                        <input type="email" class="form-input" placeholder="hanako@example.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">電話番号 *</label>
-                        <input type="tel" class="form-input" placeholder="090-1234-5678" required>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">ご希望日時 *</label>
-                    <input type="text" class="form-input" placeholder="例: 3月30日（土）14:00〜" required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">ご質問・ご要望</label>
-                    <textarea class="form-input" rows="4" placeholder="身体のお悩みや気になることがあればお書きください"></textarea>
-                </div>
-
-                <button type="submit" class="btn-elegant" style="width: 100%; background: var(--color-accent);">
-                    体験レッスンを予約する
-                </button>
-
-                <p class="form-helper text-center" style="margin-top: 1.5rem; color: var(--color-text-secondary);">
-                    24時間以内に担当者よりご連絡いたします<br>
-                    お急ぎの方は、お電話（080-3981-9678）でもご予約を承っております<br>
+                <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-top: 2rem;">
                     営業時間: 12:00 - 21:00（完全予約制）
                 </p>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -1019,8 +1226,9 @@
         <div class="container container-7xl">
             <div class="grid gap-8 mb-8" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                 <div>
+                    <img src="images/logo.webp" alt="Studio MiiA 六本木" style="height: 60px; width: auto; margin-bottom: 1.5rem; display: block;">
                     <h3 class="text-xl font-bold mb-4" style="font-family: 'Zen Antique Soft', serif; color: var(--color-accent);">
-                        🧘‍♀️ Studio MiiA 渋谷
+                        Studio MiiA 六本木
                     </h3>
                     <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">
                         完全予約制・紹介制<br>
@@ -1042,9 +1250,8 @@
                 <div>
                     <h4 class="font-semibold mb-4">お問い合わせ</h4>
                     <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.8); line-height: 2;">
-                        <li>📞 080-3981-9678</li>
-                        <li>✉️ info@studio-miia-shibuya.jp</li>
-                        <li>📍 渋谷区渋谷1-2-3</li>
+                        <li>080-3981-9678</li>
+                        <li>港区六本木7-4-1</li>
                         <li style="margin-top: 1rem;">
                             <a href="#" style="color: var(--color-accent); margin-right: 1rem;">Instagram</a>
                             <a href="#" style="color: var(--color-accent); margin-right: 1rem;">Facebook</a>
@@ -1057,7 +1264,7 @@
             <div class="text-center pt-6" style="border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
                 <p style="margin-bottom: 0.5rem;">
                     <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">プライバシーポリシー</a>
-                    <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">利用規約</a>
+                    <a href="guide.html" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">利用規約</a>
                     <a href="#" style="color: rgba(255,255,255,0.8); margin: 0 1rem;">特定商取引法</a>
                 </p>
                 <p>© 2024 Studio MiiA Shibuya. All rights reserved.</p>
@@ -1110,10 +1317,135 @@
             });
         });
 
-        // 初期状態：FAQ回答を非表示
+        // 初期状態:FAQ回答を非表示
         document.querySelectorAll('.faq-answer').forEach(answer => {
             answer.style.display = 'none';
         });
+
+        // ギャラリーカルーセル
+        const galleryTrack = document.getElementById('galleryTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        const slides = document.querySelectorAll('.gallery-slide');
+        let currentSlide = 0;
+        let autoPlayInterval;
+
+        // スライドを表示する関数
+        function showSlide(index) {
+            // インデックスを範囲内に収める
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            // スクロール位置を更新
+            const slideWidth = slides[0].offsetWidth;
+            galleryTrack.scrollTo({
+                left: slideWidth * currentSlide,
+                behavior: 'smooth'
+            });
+
+            // インジケーターを更新
+            indicators.forEach((indicator, i) => {
+                if (i === currentSlide) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        // 次のスライド
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // 前のスライド
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // ボタンイベント
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoPlay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoPlay();
+            });
+        }
+
+        // インジケータークリック
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                showSlide(index);
+                resetAutoPlay();
+            });
+        });
+
+        // 自動再生
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 5000); // 5秒ごとに次のスライドへ
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayInterval) {
+                clearInterval(autoPlayInterval);
+            }
+        }
+
+        function resetAutoPlay() {
+            stopAutoPlay();
+            startAutoPlay();
+        }
+
+        // スクロールイベントでインジケーターを更新
+        if (galleryTrack) {
+            galleryTrack.addEventListener('scroll', () => {
+                const slideWidth = slides[0].offsetWidth;
+                const newIndex = Math.round(galleryTrack.scrollLeft / slideWidth);
+                if (newIndex !== currentSlide) {
+                    currentSlide = newIndex;
+                    indicators.forEach((indicator, i) => {
+                        if (i === currentSlide) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+                }
+            });
+
+            // 自動再生を開始
+            startAutoPlay();
+
+            // マウスホバーで自動再生を停止
+            galleryTrack.addEventListener('mouseenter', stopAutoPlay);
+            galleryTrack.addEventListener('mouseleave', startAutoPlay);
+        }
+
+        // フォーム送信処理
+        const reservationForm = document.getElementById('reservationForm');
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // ここで実際のフォーム送信処理を行う
+                // 例: fetch APIでバックエンドにデータ送信
+
+                // フォーム送信後、サンクスページにリダイレクト
+                window.location.href = 'thank-you.html';
+            });
+        }
     </script>
 </body>
 </html>
