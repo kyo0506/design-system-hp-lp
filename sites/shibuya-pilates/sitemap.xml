@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- トップページ（最重要） -->
+    <url>
+        <loc>https://www.example.com/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.example.com/images/ogp.jpg</image:loc>
+            <image:title>ÉLAN Pilates 六本木店</image:title>
+        </image:image>
+    </url>
+
+    <!-- ご利用ガイド -->
+    <url>
+        <loc>https://www.example.com/guide.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 予約ページ（LINE） -->
+    <url>
+        <loc>https://www.example.com/reserve-line.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- 予約ページ（ホットペッパー） -->
+    <url>
+        <loc>https://www.example.com/reserve-hotpepper.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- サンキューページ -->
+    <url>
+        <loc>https://www.example.com/thank-you.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- クッションLP -->
+    <url>
+        <loc>https://www.example.com/cushion.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>

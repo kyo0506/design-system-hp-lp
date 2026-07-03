@@ -33,3 +33,5 @@ build/
 
 # OS
 Thumbs.db
+__pycache__/
+.env.*

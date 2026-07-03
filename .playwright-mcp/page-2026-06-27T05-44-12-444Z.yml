@@ -1,0 +1,58 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Fusion Gateway" [level=1] [ref=e5]
+      - paragraph [ref=e6]: 0 model keys available. Code execution disabled.
+    - button "Reload config" [ref=e7] [cursor=pointer]:
+      - img [ref=e8]
+  - main [ref=e11]:
+    - region "Gateway controls" [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: Access token
+        - textbox "Access token" [ref=e15]:
+          - /placeholder: Required from iPhone/LAN
+      - tablist "Mode" [ref=e16]:
+        - button "/ask" [ref=e17] [cursor=pointer]
+        - button "/debate" [ref=e18] [cursor=pointer]
+        - button "/cc /codex" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: Models
+          - generic [ref=e23]: 0/5 configured
+        - generic [ref=e24]:
+          - button "Claude claude-sonnet-4-5" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]:
+              - strong [ref=e27]: Claude
+              - generic [ref=e28]: claude-sonnet-4-5
+          - button "ChatGPT gpt-4.1" [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]:
+              - strong [ref=e31]: ChatGPT
+              - generic [ref=e32]: gpt-4.1
+          - button "Gemini gemini-2.5-pro" [ref=e33] [cursor=pointer]:
+            - generic [ref=e34]:
+              - strong [ref=e35]: Gemini
+              - generic [ref=e36]: gemini-2.5-pro
+          - button "Grok grok-4" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]:
+              - strong [ref=e39]: Grok
+              - generic [ref=e40]: grok-4
+          - button "DeepSeek deepseek-chat" [ref=e41] [cursor=pointer]:
+            - generic [ref=e42]:
+              - strong [ref=e43]: DeepSeek
+              - generic [ref=e44]: deepseek-chat
+      - generic [ref=e45]:
+        - generic [ref=e46]: Prompt
+        - textbox "Prompt" [ref=e47]:
+          - /placeholder: 5社のAIに同じ質問を投げて比較したい内容を書いてください
+        - generic [ref=e48]:
+          - button "Run" [ref=e49] [cursor=pointer]:
+            - img [ref=e50]
+            - text: Run
+          - button "Clear" [ref=e52] [cursor=pointer]
+    - region "Results" [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]: Results
+        - generic [ref=e56]: Idle
+      - generic [ref=e57]:
+        - img [ref=e58]
+        - paragraph [ref=e59]: Run /ask to compare models, /debate for a decision memo, or /cc /codex for an approved repo job.

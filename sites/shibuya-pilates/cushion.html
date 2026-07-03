@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TKR492BR');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予約ページへ移動中 | ÉLAN Pilates</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ============================================ -->
+    <!-- 広告トラッキングコード（コンバージョン計測） -->
+    <!-- ============================================ -->
+
+    <!-- Google Analytics (GA4) コンバージョン -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+
+        // コンバージョンイベントを発火
+        gtag('event', 'conversion', {
+            'send_to': 'G-XXXXXXXXXX/CONVERSION_LABEL',
+            'value': 1.0,
+            'currency': 'JPY'
+        });
+    </script>
+    -->
+
+    <!-- Google Ads コンバージョントラッキング -->
+    <!--
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                'value': 1.0,
+                'currency': 'JPY',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    -->
+
+    <!-- Facebook Pixel コンバージョン -->
+    <!--
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead'); // コンバージョンイベント
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=Lead&noscript=1"
+    /></noscript>
+    -->
+
+    <!-- Yahoo広告タグ コンバージョン -->
+    <!--
+    <script type="text/javascript">
+        (function () {
+            var tagjs = document.createElement("script");
+            var s = document.getElementsByTagName("script")[0];
+            tagjs.async = true;
+            tagjs.src = "//s.yjtag.jp/tag.js#site=SITE_ID";
+            s.parentNode.insertBefore(tagjs, s);
+        }());
+
+        // コンバージョン計測
+        window.yjDataLayer = window.yjDataLayer || [];
+        window.yjDataLayer.push({
+            "yahoo_conversion_id": "CONVERSION_ID",
+            "yahoo_conversion_label": "CONVERSION_LABEL",
+            "yahoo_conversion_value": "1"
+        });
+    </script>
+    -->
+
+    <!-- LINE Tag コンバージョン -->
+    <!--
+    <script>
+        (function(g,d,o){
+            g._ltq=g._ltq||[];g._lt=g._lt||function(){g._ltq.push(arguments)};
+            var h=location.protocol==='https:'?'https://d.line-scdn.net':'http://d.line-cdn.net';
+            var s=d.createElement('script');s.async=1;
+            s.src=o||h+'/n/line_tag/public/release/v1/lt.js';
+            var t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);
+        })(window, document);
+        _lt('init', {
+            customerType: 'lap',
+            tagId: 'YOUR_TAG_ID'
+        });
+        _lt('send', 'pv', ['YOUR_TAG_ID']);
+        _lt('send', 'cv', {
+            type: 'Conversion'
+        }, ['YOUR_TAG_ID']);
+    </script>
+    -->
+
+    <style>
+        :root {
+            /* ブラウン系 */
+            --color-primary-50: hsl(30, 25%, 97%);
+            --color-primary-100: hsl(30, 25%, 92%);
+            --color-primary-200: hsl(30, 20%, 85%);
+            --color-primary-300: hsl(30, 18%, 70%);
+            --color-primary-400: hsl(30, 16%, 55%);
+            --color-primary-500: hsl(30, 20%, 43%);
+            --color-primary-600: hsl(30, 20%, 35%);
+            --color-primary-700: hsl(30, 20%, 27%);
+            --color-primary-800: hsl(30, 20%, 20%);
+            --color-primary-900: hsl(30, 20%, 12%);
+
+            /* パステルブルー - アクセント */
+            --color-secondary-500: hsl(197, 87%, 84%);
+
+            /* オレンジ - アクセント */
+            --color-accent: hsl(33, 100%, 71%);
+            --color-accent-light: hsl(33, 100%, 85%);
+
+            /* テキストカラー */
+            --color-text-primary: hsl(30, 20%, 20%);
+            --color-text-secondary: hsl(30, 15%, 40%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Zen Antique Soft', sans-serif;
+            background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-secondary-500) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 10px 40px rgba(126, 106, 89, 0.15);
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Zen Antique Soft', serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--color-primary-600);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            color: var(--color-text-secondary);
+            line-height: 2;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            letter-spacing: 0.03em;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 2rem auto;
+            border: 4px solid var(--color-primary-100);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .redirect-info {
+            background: var(--color-primary-50);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .redirect-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-primary);
+        }
+
+        .redirect-info small {
+            color: var(--color-text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .manual-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--color-primary-600);
+            border: 2px solid var(--color-primary-500);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        .manual-link:hover {
+            background: var(--color-primary-500);
+            color: white;
+        }
+
+        /* スマホ対応 - 文字ずれ防止 */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+
+            h1, p, span, div {
+                letter-spacing: 0.02em !important;
+            }
+
+            .container {
+                padding: 2.5rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: 0.02em !important;
+                line-height: 1.5;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.8;
+            }
+
+            .redirect-info {
+                padding: 1.25rem;
+            }
+
+            .redirect-info p {
+                font-size: 0.85rem;
+            }
+
+            .manual-link {
+                padding: 0.875rem 2rem;
+                font-size: 0.9rem;
+                letter-spacing: 0.03em !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem 1.25rem;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+
+            .manual-link {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="images/logo.webp">
+
+    <script>
+        // 予約ページのURL
+        const RESERVATION_URL = 'https://stadiomiia.hacomono.jp/hom';
+
+        // ページ読み込み後、2秒待ってからリダイレクト
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                window.location.href = RESERVATION_URL;
+            }, 2000);
+        });
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKR492BR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <div style="font-family: 'Zen Antique Soft', serif; font-size: 2rem; font-weight: 300; letter-spacing: 0.1em; color: var(--color-primary-600); margin-bottom: 2rem;">ÉLAN Pilates</div>
+
+        <h1>予約ページへ移動中</h1>
+
+        <p>
+            まもなく予約ページに移動します。<br>
+            少々お待ちください。
+        </p>
+
+        <div class="spinner"></div>
+
+        <div class="redirect-info">
+            <p><strong>予約システムについて</strong></p>
+            <small>
+                ※ 自動的にページが切り替わらない場合は、<br>
+                下記のボタンをクリックしてください
+            </small>
+        </div>
+
+        <a href="https://stadiomiia.hacomono.jp/hom" class="manual-link">
+            予約ページへ進む
+        </a>
+    </div>
+
+    <footer style="background-color: #5a4a3a; color: white; padding: 1.5rem 0; margin-top: 3rem; text-align: center;">
+        <p style="margin-bottom: 0.5rem;">
+            <a href="docs/privacy-policy.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">プライバシーポリシー</a>
+            <a href="docs/terms-of-service.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">利用規約</a>
+            <a href="docs/tokushoho.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">特定商取引法に基づく表記</a>
+        </p>
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">© 2026 ÉLAN Pilates. All rights reserved.</p>
+    </footer>
+</body>
+</html>

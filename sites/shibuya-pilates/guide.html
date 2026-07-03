@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TKR492BR');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ご利用案内・利用規約 | Studio MiiA 六本木</title>
+    <title>ご利用案内・利用規約 | ÉLAN Pilates</title>
 
     <!-- Design System -->
     <link rel="stylesheet" href="design-system/index.css">
@@ -286,30 +294,46 @@
         }
 
         @media (max-width: 768px) {
+            /* 基本テキスト設定 - 文字ずれ防止 */
+            body {
+                font-size: 14px;
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+
+            h1, h2, h3, p, span, div {
+                letter-spacing: 0.02em !important;
+            }
+
             .header {
                 padding: 2rem 1rem;
             }
 
             .header h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
+                letter-spacing: 0.03em !important;
+                line-height: 1.5;
             }
 
             .header p {
                 font-size: 0.7rem;
+                letter-spacing: 0.1em !important;
             }
 
             .container {
                 padding: 2.5rem 1rem;
+                max-width: 100%;
+                overflow-x: hidden;
             }
 
             .terms-card {
-                padding: 2.5rem 1.5rem;
+                padding: 2rem 1.25rem;
                 border-radius: 12px;
             }
 
             .section {
                 padding-left: 0;
-                margin-bottom: 3rem;
+                margin-bottom: 2.5rem;
             }
 
             .section-number {
@@ -321,15 +345,29 @@
             }
 
             .section-title {
-                font-size: 1.2rem;
+                font-size: 1.15rem;
+                letter-spacing: 0.02em !important;
             }
 
             .section-content {
-                font-size: 0.9rem;
+                font-size: 0.875rem;
+                line-height: 1.9;
+            }
+
+            .section-content p {
+                margin-bottom: 1rem;
             }
 
             .section-content ul li {
                 padding-left: 1.5rem;
+                font-size: 0.875rem;
+                line-height: 1.8;
+                margin-bottom: 0.75rem;
+            }
+
+            .intro-text {
+                font-size: 0.9rem;
+                line-height: 1.8;
             }
 
             .back-link {
@@ -337,10 +375,16 @@
                 font-size: 0.85rem;
                 width: 100%;
                 max-width: 300px;
+                letter-spacing: 0.05em !important;
             }
 
             .note {
-                padding: 1.5rem;
+                padding: 1.25rem;
+            }
+
+            .note p {
+                font-size: 0.875rem;
+                line-height: 1.8;
             }
 
             .note::before {
@@ -349,11 +393,38 @@
                 right: 1rem;
             }
         }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 13px;
+            }
+
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .terms-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .section-content {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 
     <link rel="icon" type="image/png" href="images/logo.webp">
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKR492BR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="header">
         <p>Guide</p>
         <h1>ご利用案内・利用規約</h1>
@@ -361,7 +432,7 @@
 
     <div class="container">
         <p class="intro-text">
-            Studio MiiAをご利用いただくにあたり、以下の利用規約をご確認ください。<br>
+            ÉLAN Pilatesをご利用いただくにあたり、以下の利用規約をご確認ください。<br>
             安心・安全にご利用いただくための大切な内容となっております。
         </p>
 
@@ -370,7 +441,7 @@
                 <div class="section-number">01</div>
                 <h2 class="section-title">目的</h2>
                 <div class="section-content">
-                    <p>Studio MiiA（以下本スタジオ）は、会員が本施設を利用することによって自己の健康の維持、増進を図ることを目的とします。</p>
+                    <p>ÉLAN Pilates（以下本スタジオ）は、会員が本施設を利用することによって自己の健康の維持、増進を図ることを目的とします。</p>
                 </div>
             </div>
 
@@ -551,5 +622,16 @@
             </a>
         </div>
     </div>
+
+    <footer style="background-color: var(--color-primary-800, #5a4a3a); color: white; padding: 1.5rem 0; margin-top: 3rem;">
+        <div style="max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; text-align: center;">
+            <p style="margin-bottom: 0.5rem;">
+                <a href="docs/privacy-policy.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">プライバシーポリシー</a>
+                <a href="docs/terms-of-service.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">利用規約</a>
+                <a href="docs/tokushoho.pdf" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.8); margin: 0 1rem; text-decoration: none;">特定商取引法に基づく表記</a>
+            </p>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.875rem;">© 2026 ÉLAN Pilates. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

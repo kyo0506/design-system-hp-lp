@@ -1,0 +1,238 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "ÉLAN Pilates" [ref=e3] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e4]: ÉLAN Pilates
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Private Pilates Studio
+      - heading "AI姿勢解析 × 完全プライベートピラティス" [level=1] [ref=e8]:
+        - text: AI姿勢解析 ×
+        - text: 完全プライベートピラティス
+      - paragraph [ref=e9]: 若者から高齢者まで、幅広い世代に対応。
+      - paragraph [ref=e10]:
+        - text: 最新のAI姿勢解析システムで身体の状態を可視化し、
+        - text: 一人ひとりの姿勢や身体のクセを分析。
+        - text: お客様に最適なオーダーメイドプログラムをご提案します。
+      - paragraph [ref=e11]:
+        - text: 男性には、運動パフォーマンス向上や柔軟性改善、
+        - text: トレーニング後のコンディショニングサポート。
+        - text: 女性には、美しい姿勢づくりやしなやかなボディライン形成、柔軟性向上を。
+      - paragraph [ref=e12]:
+        - text: 経験豊富なトレーナーがマンツーマンで寄り添い、
+        - text: 理想の身体づくりをサポートします。
+      - paragraph [ref=e13]: 六本木徒歩2分・完全予約制
+      - link "予約する" [ref=e15] [cursor=pointer]:
+        - /url: cushion.html
+    - img [ref=e17]
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - paragraph [ref=e22]: About Us
+      - heading "スタジオに ついて" [level=2] [ref=e23]:
+        - text: スタジオに
+        - text: ついて
+    - generic [ref=e24]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - img "インストラクター" [ref=e28]
+          - img "スタジオ風景" [ref=e29]
+        - button "‹" [ref=e30] [cursor=pointer]
+        - button "›" [ref=e31] [cursor=pointer]
+      - generic [ref=e35]:
+        - heading "六本木駅徒歩2分 プライベートレッスン専門 スタジオ" [level=3] [ref=e36]:
+          - text: 六本木駅徒歩2分
+          - text: プライベートレッスン専門
+          - text: スタジオ
+        - paragraph [ref=e37]: 当スタジオは、完全予約制のプライベートピラティススタジオです。一人ひとりと丁寧に向き合い、その方に合ったプログラムをご提供することを大切にしています。体幹とインナーマッスルを鍛えることで、代謝向上・血行促進・脂肪燃焼を促します。
+        - paragraph [ref=e38]: 高齢者の方や体に不調のある方でも無理なく取り組めるレッスン内容となっております。また来たいと思っていただけるような、アットホームな空間づくりを心がけています。男女年齢を問わず、美容と健康状態の向上を実感していただけます。
+        - generic [ref=e39]:
+          - generic [ref=e40]: AI姿勢解析システム導入
+          - img "ÉLAN Pilates六本木店のAI姿勢解析システム - 姿勢のゆがみを可視化" [ref=e42]
+        - paragraph [ref=e43]: 予約はここから30秒
+        - link "予約する" [ref=e45] [cursor=pointer]:
+          - /url: cushion.html
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - paragraph [ref=e49]: Why Choose Us
+      - heading "選ばれる理由" [level=2] [ref=e50]
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e54]: "01"
+        - heading "完全プライベート制" [level=3] [ref=e55]
+        - paragraph [ref=e56]: 紹介制・完全予約制のプライベートレッスン。一人ひとりと向き合い、その方に合ったプログラムを提供します。
+      - generic [ref=e57]:
+        - generic [ref=e59]: "02"
+        - heading "体幹強化に特化" [level=3] [ref=e60]
+        - paragraph [ref=e61]: 体幹とインナーマッスルを鍛え、代謝向上・血行促進・脂肪燃焼を実現します。
+      - generic [ref=e62]:
+        - generic [ref=e64]: "03"
+        - heading "アットホームな空間" [level=3] [ref=e65]
+        - paragraph [ref=e66]: また来たいと思える温かい雰囲気。リラックスしてレッスンを受けられる環境です。
+      - generic [ref=e67]:
+        - generic [ref=e69]: "04"
+        - heading "幅広い年齢層対応" [level=3] [ref=e70]
+        - paragraph [ref=e71]: 高齢者や体に不調のある方でも無理なく取り組める内容。男女年齢問わず歓迎します。
+  - generic [ref=e73]:
+    - generic [ref=e74]:
+      - paragraph [ref=e75]: For Beginners
+      - heading "一人ひとりに寄り添ったレッスン" [level=2] [ref=e76]
+      - paragraph [ref=e77]:
+        - text: 運動が苦手な方、体力に自信がない方、高齢の方も安心してご参加いただけます。
+        - text: プライベートレッスンだからこそ実現できる、あなただけの特別な時間です。
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e81]: "1"
+        - heading "自分のペースで" [level=3] [ref=e82]
+        - paragraph [ref=e83]: 無理なく続けられるよう、一人ひとりの体力や体調に合わせてプログラムを組み立てます
+      - generic [ref=e84]:
+        - generic [ref=e86]: "2"
+        - heading "安心のサポート" [level=3] [ref=e87]
+        - paragraph [ref=e88]: 丁寧なカウンセリングと細やかな指導で、不安なく始められる環境をご用意しています
+      - generic [ref=e89]:
+        - generic [ref=e91]: "3"
+        - heading "周りを気にせず集中" [level=3] [ref=e92]
+        - paragraph [ref=e93]: 完全プライベート空間で、他の人の目を気にすることなくレッスンに集中できます
+  - generic [ref=e95]:
+    - heading "スタジオギャラリー" [level=2] [ref=e96]
+    - paragraph [ref=e97]: GALLERY
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - img "ÉLAN Pilates六本木店のスタジオ内観 - 落ち着いた雰囲気のピラティススタジオ" [ref=e101]
+        - img "ÉLAN Pilates六本木店のマンツーマンピラティスレッスン風景" [ref=e103]
+        - img "ÉLAN Pilates六本木店の認定インストラクター" [ref=e105]
+        - img "ÉLAN Pilates六本木店のピラティス専用マシン" [ref=e107]
+      - button "前の画像" [ref=e108] [cursor=pointer]: ‹
+      - button "次の画像" [ref=e109] [cursor=pointer]: ›
+    - generic [ref=e110]:
+      - button "画像1" [ref=e111] [cursor=pointer]
+      - button "画像2" [ref=e112] [cursor=pointer]
+      - button "画像3" [ref=e113] [cursor=pointer]
+      - button "画像4" [ref=e114] [cursor=pointer]
+  - generic [ref=e116]:
+    - generic [ref=e117]:
+      - paragraph [ref=e118]: Access
+      - heading "店舗情報・アクセス" [level=2] [ref=e119]
+    - generic [ref=e120]:
+      - table [ref=e121]:
+        - rowgroup [ref=e122]:
+          - row "店舗名 ÉLAN Pilates 1号店 ÉLAN Pilates 2号店" [ref=e123]:
+            - rowheader "店舗名" [ref=e124]
+            - cell "ÉLAN Pilates 1号店 ÉLAN Pilates 2号店" [ref=e125]:
+              - text: ÉLAN Pilates 1号店
+              - text: ÉLAN Pilates 2号店
+          - row "住所 〒106-0032 東京都港区六本木7-15-13 六本木ダイヤハイツ 510号 1号店 / 508号 2号店" [ref=e126]:
+            - rowheader "住所" [ref=e127]
+            - cell "〒106-0032 東京都港区六本木7-15-13 六本木ダイヤハイツ 510号 1号店 / 508号 2号店" [ref=e128]:
+              - text: 〒106-0032
+              - text: 東京都港区六本木7-15-13
+              - text: 六本木ダイヤハイツ 510号 1号店 / 508号 2号店
+          - row "アクセス 日比谷線「六本木駅」徒歩2分 ※完全予約制・紹介制のプライベートスタジオです" [ref=e129]:
+            - rowheader "アクセス" [ref=e130]
+            - cell "日比谷線「六本木駅」徒歩2分 ※完全予約制・紹介制のプライベートスタジオです" [ref=e131]:
+              - text: 日比谷線「六本木駅」徒歩2分
+              - text: ※完全予約制・紹介制のプライベートスタジオです
+          - 'row "営業時間 1号店: 12:00 - 21:00（完全予約制） 2号店: 12:00 - 19:00（完全予約制）" [ref=e132]':
+            - rowheader "営業時間" [ref=e133]
+            - 'cell "1号店: 12:00 - 21:00（完全予約制） 2号店: 12:00 - 19:00（完全予約制）" [ref=e134]':
+              - text: "1号店: 12:00 - 21:00（完全予約制）"
+              - text: "2号店: 12:00 - 19:00（完全予約制）"
+          - row "定休日 不定休（ご予約時にご確認ください）" [ref=e135]:
+            - rowheader "定休日" [ref=e136]
+            - cell "不定休（ご予約時にご確認ください）" [ref=e137]
+          - row "電話番号 080-3981-9678" [ref=e138]:
+            - rowheader "電話番号" [ref=e139]
+            - cell "080-3981-9678" [ref=e140]
+          - row "レッスン形式 プライベート（パーソナル）レッスン専門" [ref=e141]:
+            - rowheader "レッスン形式" [ref=e142]
+            - cell "プライベート（パーソナル）レッスン専門" [ref=e143]
+      - iframe [ref=e145]
+  - generic [ref=e147]:
+    - generic [ref=e148]:
+      - paragraph [ref=e149]: Pricing
+      - heading "料金プラン" [level=2] [ref=e150]
+    - img "ÉLAN Pilates六本木店の料金プラン - パーソナルピラティス月額コース料金表" [ref=e152]
+    - paragraph [ref=e153]: 予約はここから30秒
+    - link "予約する" [ref=e155] [cursor=pointer]:
+      - /url: cushion.html
+    - paragraph [ref=e157]:
+      - text: ※ 価格は全て税込表示です
+      - text: ※ 完全予約制・紹介制のため、初回は体験レッスンからのご案内となります
+      - text: ※ 詳しい料金プランはお問い合わせください
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - paragraph [ref=e161]: Trial Lesson Flow
+      - heading "体験レッスンの流れ" [level=2] [ref=e162]
+    - generic [ref=e163]:
+      - generic [ref=e164]:
+        - generic [ref=e166]: "1"
+        - heading "カウンセリング" [level=3] [ref=e167]
+        - paragraph [ref=e168]:
+          - text: お悩みや目標を
+          - text: お伺いします（10分）
+      - generic [ref=e169]:
+        - generic [ref=e171]: "2"
+        - heading "着替え・準備" [level=3] [ref=e172]
+        - paragraph [ref=e173]:
+          - text: 無料のウェアに
+          - text: 着替えていただきます（5分）
+      - generic [ref=e174]:
+        - generic [ref=e176]: "3"
+        - heading "レッスン" [level=3] [ref=e177]
+        - paragraph [ref=e178]:
+          - text: マンツーマンで
+          - text: レッスン開始（60分）
+      - generic [ref=e179]:
+        - generic [ref=e181]: "4"
+        - heading "アフターフォロー" [level=3] [ref=e182]
+        - paragraph [ref=e183]:
+          - text: ご質問や
+          - text: プラン説明（15分）
+  - generic [ref=e185]:
+    - heading "よくあるご質問" [level=2] [ref=e186]
+    - paragraph [ref=e187]: FAQ
+    - generic [ref=e188]:
+      - generic [ref=e190] [cursor=pointer]: Q 運動が苦手でも大丈夫ですか？ +
+      - generic [ref=e192] [cursor=pointer]: Q 身体が硬くても参加できますか？ +
+      - generic [ref=e194] [cursor=pointer]: Q どのくらいの頻度で通うのが効果的ですか？ +
+      - generic [ref=e196] [cursor=pointer]: Q 持ち物は何が必要ですか？ +
+      - generic [ref=e198] [cursor=pointer]: Q 予約のキャンセルはできますか？ +
+  - generic [ref=e201]:
+    - heading "体験レッスン予約" [level=2] [ref=e202]
+    - paragraph [ref=e203]:
+      - text: まずは体験レッスンで、あなたに合ったプログラムを体感してください。
+      - text: 完全予約制のため、下記のボタンからご予約ください。
+    - paragraph [ref=e204]: 予約はここから30秒
+    - link "予約する" [ref=e206] [cursor=pointer]:
+      - /url: cushion.html
+    - paragraph [ref=e207]: "営業時間: 12:00 - 21:00（完全予約制）"
+  - contentinfo [ref=e208]:
+    - generic [ref=e209]:
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - generic [ref=e212]: ÉLAN Pilates
+          - heading "ÉLAN Pilates" [level=3] [ref=e213]
+          - paragraph [ref=e214]:
+            - text: 完全予約制・紹介制
+            - text: プライベートピラティススタジオ
+            - text: 一人ひとりに寄り添ったレッスン
+        - generic [ref=e215]:
+          - heading "営業時間" [level=4] [ref=e216]
+          - list [ref=e217]:
+            - listitem [ref=e218]: 12:00 - 21:00
+            - listitem [ref=e219]: （完全予約制）
+            - listitem [ref=e220]: "最終受付: 20:00"
+            - listitem [ref=e221]: "定休日: 不定休"
+        - generic [ref=e222]:
+          - heading "お問い合わせ" [level=4] [ref=e223]
+          - list [ref=e224]:
+            - listitem [ref=e225]: 080-3981-9678
+            - listitem [ref=e226]: 港区六本木7-4-1
+      - generic [ref=e227]:
+        - paragraph [ref=e228]:
+          - link "プライバシーポリシー" [ref=e229] [cursor=pointer]:
+            - /url: "#"
+          - link "利用規約" [ref=e230] [cursor=pointer]:
+            - /url: guide.html
+          - link "特定商取引法" [ref=e231] [cursor=pointer]:
+            - /url: "#"
+        - paragraph [ref=e232]: © 2026 ÉLAN Pilates. All rights reserved.

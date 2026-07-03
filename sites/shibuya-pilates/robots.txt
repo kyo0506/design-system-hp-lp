@@ -1,0 +1,26 @@
+# robots.txt for ÉLAN Pilates 六本木店
+# https://www.example.com/
+
+User-agent: *
+Allow: /
+
+# サイトマップの場所
+Sitemap: https://www.example.com/sitemap.xml
+
+# クロール遅延（サーバー負荷軽減）
+Crawl-delay: 1
+
+# 特定のボットへの指示
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: bingbot
+Allow: /
+
+# 不要なファイルのクロール制限
+User-agent: *
+Disallow: /*.zip$
+Disallow: /design-system/

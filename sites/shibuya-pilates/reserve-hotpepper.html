@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TKR492BR');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ホットペッパー予約 | Studio MiiA 六本木</title>
@@ -99,6 +107,70 @@
             0%, 80%, 100% { opacity: 0; }
             40% { opacity: 1; }
         }
+
+        /* スマホ対応 - 文字ずれ防止 */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
+
+            h1, p, span, div {
+                letter-spacing: 0.02em !important;
+            }
+
+            .redirect-card {
+                padding: 2rem 1.5rem;
+                border-radius: 1.5rem;
+            }
+
+            .redirect-card h1 {
+                font-size: 1.5rem !important;
+                letter-spacing: 0.02em !important;
+                line-height: 1.5;
+            }
+
+            .redirect-card p {
+                font-size: 0.9rem !important;
+                line-height: 1.8;
+            }
+
+            .hotpepper-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 0.9rem !important;
+                margin-bottom: 1rem;
+            }
+
+            .redirect-button {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+
+            .redirect-info {
+                font-size: 0.85rem;
+            }
+
+            .redirect-info p {
+                font-size: 0.85rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .redirect-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .redirect-card h1 {
+                font-size: 1.3rem !important;
+            }
+
+            .redirect-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 
     <!-- 広告トラッキングコード用プレースホルダー -->
@@ -114,6 +186,11 @@
     </script>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKR492BR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="redirect-card">
         <div class="hotpepper-icon" style="background: #FF6B35; font-size: 1.5rem; font-weight: bold; color: white;">HOT<br>PEPPER</div>
         <h1 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">
@@ -134,7 +211,7 @@
 
         <div class="redirect-info">
             <p style="margin-bottom: 0.5rem;">
-                <strong>営業時間:</strong> 12:00 - 21:00（完全予約制）
+                <strong>営業時間:</strong> 9:00 - 22:00（完全予約制）
             </p>
             <p style="margin-bottom: 0.5rem;">
                 <strong>お電話でも予約可能:</strong> 080-3981-9678
